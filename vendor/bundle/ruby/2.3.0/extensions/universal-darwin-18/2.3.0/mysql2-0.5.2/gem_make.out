@@ -1,0 +1,49 @@
+current directory: /Users/david/MineProjects/wave/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.2/ext/mysql2
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190220-48576-zafrb3.rb extconf.rb --with-opt-dir=/usr/local/opt/openssl
+checking for rb_absint_size()... yes
+checking for rb_absint_singlebit_p()... yes
+checking for rb_wait_for_single_fd()... yes
+-----
+Using mysql_config at /usr/local/bin/mysql_config
+-----
+checking for mysql.h... yes
+checking for errmsg.h... yes
+checking for SSL_MODE_DISABLED in mysql.h... no
+checking for MYSQL_OPT_SSL_ENFORCE in mysql.h... yes
+checking for MYSQL.net.vio in mysql.h... yes
+checking for MYSQL.net.pvio in mysql.h... no
+checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... yes
+checking for SERVER_QUERY_NO_GOOD_INDEX_USED in mysql.h... yes
+checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... yes
+checking for SERVER_QUERY_WAS_SLOW in mysql.h... yes
+checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... yes
+checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... yes
+checking for my_bool in mysql.h... yes
+-----
+Setting rpath to /usr/local/Cellar/mysql-client/5.7.10/lib
+-----
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/david/MineProjects/wave/vendor/bundle/ruby/2.3.0/extensions/universal-darwin-18/2.3.0/mysql2-0.5.2/mkmf.log
+
+current directory: /Users/david/MineProjects/wave/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.2/ext/mysql2
+make "DESTDIR=" clean
+
+current directory: /Users/david/MineProjects/wave/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.2/ext/mysql2
+make "DESTDIR="
+compiling client.c
+client.c:140:1: warning: control may reach end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+compiling infile.c
+compiling mysql2_ext.c
+compiling result.c
+compiling statement.c
+linking shared-object mysql2/mysql2.bundle
+
+current directory: /Users/david/MineProjects/wave/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.2/ext/mysql2
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20190220-48576-13jqlqw/mysql2
