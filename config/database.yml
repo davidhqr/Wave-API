@@ -11,8 +11,8 @@ default: &default
 
 development:
   <<: *default
-  database: wave_api
-  username: wave_apiit
+  database: wave
+  username: waveit
   password: f1uffba11
   host: 138.197.151.168
   port: 3306
@@ -27,8 +27,8 @@ test:
 
 production:
   <<: *default
-  database: wave_api
-  username: wave_apiit
+  database: wave
+  username: waveit
   password: f1uffba11
   host: 138.197.151.168
   port: 3306
