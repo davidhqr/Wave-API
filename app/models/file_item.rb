@@ -1,3 +1,3 @@
 class FileItem < ApplicationRecord
-  belongs_to :wave_id
+  has_one :wave
 end
