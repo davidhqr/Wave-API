@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(version: 2019_02_21_212103) do
 
   create_table "file_items", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.bigint "wave_id"
+    t.index ["wave_id"], name: "index_file_items_on_wave_id"
     t.string "name"
     t.string "format"
     t.decimal "size", precision: 10
     t.string "path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "wave_id"
-    t.index ["wave_id"], name: "index_file_items_on_wave_id"
   end
 
   create_table "waves", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
