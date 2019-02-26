@@ -1,6 +1,6 @@
-require 'json'
-
 class WavesController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
   end
 
@@ -15,27 +15,48 @@ class WavesController < ApplicationController
   end
 
   def create
-    data = JSON.parse(response.body)
-    return head(:bad_request) unless data
+    return head(:bad_request) unless validate(params[:code])
 
-    code = data[:code]
-    return head(:bad_request) unless code && validate(code)
-
-    if data[:file_name] && data[:file_format] && data[:file_size] && data[:file_path]
-
-    elsif data[:text]
-      return head(:conflict) if Wave.find_by_code(code)
-
-      Wave.create(code: code, text: data[:text])
+    if params[:text]
+      wave = create_text_wave
+      render json: wave
     else
-      return head(:bad_request)
+      wave = create_file_wave
+      render json: wave
     end
   end
 
   private
 
+  def text_wave_params
+    params.require(:code)
+    params.require(:text)
+    params.permit(:code, :text)
+  end
+
+  def create_text_wave
+    Wave.create!(text_wave_params)
+  end
+
+  def file_wave_params
+    params.require(:code)
+    params.require(:files)
+    params.permit(:code, files: [])
+  end
+
+  def create_file_wave
+    wave = Wave.create!(file_wave_params)
+    files = params[:files]
+
+    files.each do |file|
+      wave.files.attach(file)
+    end
+
+    wave
+  end
+
   def validate(code)
-    return true if code.length == 10 && code.start_with?("wv")
+    return true if code && code.length == 10 && code.start_with?("wv")
     false
   end
 end
