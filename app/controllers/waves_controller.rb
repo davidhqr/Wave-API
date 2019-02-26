@@ -15,15 +15,13 @@ class WavesController < ApplicationController
   end
 
   def create
-    return head(:bad_request) unless validate(params[:code])
-
     if params[:text]
       wave = create_text_wave
-      render json: wave
     else
       wave = create_file_wave
-      render json: wave
     end
+
+    render json: wave
   end
 
   private
