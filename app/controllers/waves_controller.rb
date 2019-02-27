@@ -11,17 +11,20 @@ class WavesController < ApplicationController
     wave = Wave.find_by_code(code)
     return head(:not_found) unless wave
 
-    render json: wave
+    response = wave.attributes
+    response.delete("id")
+    response.delete("updated_at")
+    append_file_urls(wave, response)
+
+    render json: response
   end
 
   def create
-    if params[:text]
-      wave = create_text_wave
+    if params["text"]
+      create_text_wave
     else
-      wave = create_file_wave
+      create_file_wave
     end
-
-    render json: wave
   end
 
   private
@@ -33,7 +36,8 @@ class WavesController < ApplicationController
   end
 
   def create_text_wave
-    Wave.create!(text_wave_params)
+    wave = Wave.create(text_wave_params)
+    render_wave(wave)
   end
 
   def file_wave_params
@@ -43,18 +47,35 @@ class WavesController < ApplicationController
   end
 
   def create_file_wave
-    wave = Wave.create!(file_wave_params)
-    files = params[:files]
-
-    files.each do |file|
-      wave.files.attach(file)
-    end
-
-    wave
+    wave = Wave.create(file_wave_params)
+    render_wave(wave)
   end
 
-  def validate(code)
-    return true if code && code.length == 10 && code.start_with?("wv")
-    false
+  def append_file_urls(wave, response)
+    files = []
+
+    wave.files.attachments.each do |file|
+      files.append(rails_blob_url(file, disposition: "attachment"))
+    end
+
+    if files.any?
+      response[:files] = files
+    end
+
+    files
+  end
+
+  def render_wave(wave)
+    unless wave.save
+      render json: { error: wave.errors }, status: 400
+      return
+    end
+
+    response = wave.attributes
+    response.delete("id")
+    response.delete("updated_at")
+    append_file_urls(wave, response)
+
+    render json: response
   end
 end
