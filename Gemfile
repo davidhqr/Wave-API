@@ -66,3 +66,5 @@ gem 'rename'
 
 gem "webpacker", "~> 4.0"
 gem 'react_on_rails', '11.2.1'
+
+gem 'mini_racer', platforms: :ruby
