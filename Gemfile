@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mysql2', '~> 0.5.2'
 gem 'rename'
+
+gem "webpacker", "~> 4.0"
+gem 'react_on_rails', '11.2.1'
