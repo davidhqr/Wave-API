@@ -1,24 +1,18 @@
-# README
+## Wave-API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Wave Backend API which is responsible for the creation and retrieval of Waves.
 
-Things you may want to cover:
+## Endpoints
 
-* Ruby version
+**`GET` waves/:code** Retrieves a wave by its code (TODO: Full documentation in another .md file)\
+**`POST` waves** Saves a wave including its code, text, and files (TODO: Full documentation in another .md file)
 
-* System dependencies
+## Usage
 
-* Configuration
+### Development
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run the Wave API, execute the following commands:
+1. `git clone git@github.com:davidhqr/Wave-API.git`
+2. `bundle install`
+3. `rails server`
+4. `Navigate to http://localhost:3000`
