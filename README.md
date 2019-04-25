@@ -16,3 +16,10 @@ To run the Wave API, execute the following commands:
 2. `bundle install`
 3. `rails server`
 4. `Navigate to http://localhost:3000`
+
+### Production
+
+This article was followed while deploying the API to `appserver`: [Deploying Ruby App To Production](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/nginx/oss/el7/deploy_app.html)
+
+We are using `Phusion Passenger` as an integration with `Nginx`.\
+Use `systemctl status nginx` to check the status.
