@@ -25,3 +25,4 @@ Notes:
 - We are using `Phusion Passenger` as an integration with `Nginx`
 - Currently, the API exists at `/var/www/wave-api` on `appserver`
 - Use `systemctl status nginx` to check the status
+- Production secrets are currently in the code. **Must be moved to secret environment variables before changing repo to public**
