@@ -4,18 +4,18 @@ This is the Wave Backend API which is responsible for the creation and retrieval
 
 ## Endpoints
 
-**`GET` waves/:code** Retrieves a wave by its code (TODO: Full documentation in another .md file)\
-**`POST` waves** Saves a wave including its code, text, and files (TODO: Full documentation in another .md file)
+**`GET` waves/:code** Retrieves a wave by its code  
+**`POST` waves** Saves a wave including its code, text, and files
 
 ## Usage
 
 ### Development
 
-To run the Wave API, execute the following commands:
-1. `git clone git@github.com:davidhqr/Wave-API.git`
-2. `bundle install`
-3. `rails server`
-4. `Navigate to http://localhost:3000`
+To run the Wave API locally, execute the following commands:
+1. Execute `git clone git@github.com:davidhqr/Wave-API.git`
+2. Execute `bundle install`
+3. Execute `rails server`
+4. Navigate to http://localhost:3000
 
 ### Production
 
