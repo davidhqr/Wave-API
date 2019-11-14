@@ -29,9 +29,10 @@ To deploy the product API on the server:
 2. Execute `bundle install --deployment --without development test`
 3. Execute `bundle exec rake assets:precompile db:migrate RAILS_ENV=production`
 4. Execute `systemctl restart nginx`
+5. Execute `systemctl status nginx` to check the status
 
 This article was followed while deploying the API: [Deploying Ruby App To Production](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/nginx/oss/el7/deploy_app.html)
 
 ## Notes
 - We are using `Phusion Passenger` as an integration with `Nginx`
-- Use `systemctl status nginx` to check the status
+- The gem `rack-cors` is used to allow the React frontend to call the API 
