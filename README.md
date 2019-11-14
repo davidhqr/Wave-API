@@ -34,5 +34,6 @@ To deploy the product API on the server:
 This article was followed while deploying the API: [Deploying Ruby App To Production](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/nginx/oss/el7/deploy_app.html)
 
 ## Notes
-- We are using `Phusion Passenger` as an integration with `Nginx`
-- The gem `rack-cors` is used to allow the React frontend to call the API 
+- We are using Phusion Passenger as an integration with nginx
+- To enable CORS, we added headers in the Passenger config for Wave
+- Passenger config for Wave is located at `/etc/nginx/conf.d/wave-api.conf`
