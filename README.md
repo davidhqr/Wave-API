@@ -23,9 +23,15 @@ To run the Wave API locally, execute the following commands:
 
 Live Production API: http://138.197.151.168
 
-This article was followed while deploying the API to `appserver`: [Deploying Ruby App To Production](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/nginx/oss/el7/deploy_app.html)
+To deploy the product API on the server:
+1. Execute `cd /var/www/wave-api`
+1. Execute `git pull`
+2. Execute `bundle install --deployment --without development test`
+3. Execute `bundle exec rake assets:precompile db:migrate RAILS_ENV=production`
+4. Execute `systemctl restart nginx`
 
-Notes:
+This article was followed while deploying the API: [Deploying Ruby App To Production](https://www.phusionpassenger.com/library/walkthroughs/deploy/ruby/ownserver/nginx/oss/el7/deploy_app.html)
+
+## Notes
 - We are using `Phusion Passenger` as an integration with `Nginx`
-- Currently, the API exists at `/var/www/wave-api` on `appserver`
 - Use `systemctl status nginx` to check the status
