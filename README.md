@@ -1,4 +1,10 @@
-## Wave-API
+# Wave-API
+
+[![Contact](https://img.shields.io/badge/contact-%40davidhqr-blue)](https://github.com/davidhqr)
+[![GitHub license](https://img.shields.io/github/license/davidhqr/Wave-API)](https://github.com/davidhqr/Wave-API)
+[![GitHub issues](https://img.shields.io/github/issues/davidhqr/Wave-API)](https://github.com/davidhqr/Wave-API/issues)
+[![GitHub stars](https://img.shields.io/github/stars/davidhqr/Wave-API)](https://github.com/davidhqr/Wave-API/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/davidhqr/Wave-API)](https://github.com/davidhqr/Wave-API/network)
 
 This is the Wave Backend API which is responsible for the creation and retrieval of Waves.
 
