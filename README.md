@@ -9,6 +9,17 @@ Wave Flutter App: https://github.com/davidhqr/Wave-App
 **`GET` waves/:code** Retrieves a wave by its code  
 **`POST` waves** Saves a wave including its code, text, and files
 
+## Database
+
+### waves
+| Field      | Type         | Description                                     |
+|------------|--------------|-------------------------------------------------|
+| id         | BIGINT(20)   | Wave id                                         |
+| code       | VARCHAR(255) | Wave code                                       |
+| text       | VARCHAR(255) | Text contained in the Wave if it is a text Wave |
+| created_at | DATETIME     | Date that the Wave was created                  |
+| updated_at | DATETIME     | Date that the Wave was last updated             |
+
 ## Usage
 
 ### Development
@@ -23,7 +34,7 @@ To run the Wave API locally, execute the following commands:
 
 Live Production API: http://138.197.151.168
 
-To deploy the product API on the server:
+To deploy the API on the server:
 1. Execute `cd /var/www/wave-api`
 1. Execute `git pull`
 2. Execute `bundle install --deployment --without development test`
