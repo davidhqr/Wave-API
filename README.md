@@ -40,7 +40,7 @@ To run the Wave API locally, execute the following commands:
 
 ### Production
 
-Live Production API: http://138.197.151.168
+Live Production API: http://138.197.151.168:3000
 
 To deploy the API on the server:
 1. Execute `cd /var/www/wave-api`
