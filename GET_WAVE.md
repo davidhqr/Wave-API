@@ -1,19 +1,22 @@
-## GET Wave
+## Get Wave
 
-### URL
-/waves/:code
+### Description
+Retrieve a text Wave or file Wave by code.
+
+### Endpoint
+`/waves/:code`
 
 ### Method
 `GET`
 
-### URL Params
-None
+### URL Parameters
+`None`
 
-### Data Params
-None
+### Data Parameters
+`None`
 
 ### Success Response
-**Code:** 200 OK\
+**Code:** `200 OK`\
 **Content:**
 ```
 {
@@ -22,6 +25,7 @@ None
     "created_at": "2019-11-15T03:07:06.000Z"
 }
 ```
+OR
 ```
 {
     "code": "wv8fL3mz0f",
@@ -34,5 +38,5 @@ None
 ```
 
 ### Error Response
-**Code:** 404 NOT FOUND\
-**Content:** None
+**Code:** `404 NOT FOUND`\
+**Content:** `None`
