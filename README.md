@@ -15,7 +15,7 @@ Wave Flutter App: https://github.com/davidhqr/Wave-App
 **`GET` waves/:code** Retrieves a wave by its code  
 **`POST` waves** Saves a wave including its code, text, and files
 
-Test the endpoints: https://www.getpostman.com/collections/739d155fdfb50f5c0773
+Test the endpoints with Postman: https://www.getpostman.com/collections/739d155fdfb50f5c0773
 
 ## Database
 
