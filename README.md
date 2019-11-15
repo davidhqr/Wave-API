@@ -12,8 +12,8 @@ Wave Flutter App: https://github.com/davidhqr/Wave-App
 
 ## Endpoints
 
-**`GET` /waves/:code** Retrieve a Wave by code  
-**`POST` /waves** Save a wave
+**`GET` `/waves/:code`** [Retrieve a Wave by code](GET_WAVE.md) 
+**`POST` `/waves`** [Save a wave](SAVE_WAVE.md)
 
 Test the endpoints with Postman: https://www.getpostman.com/collections/739d155fdfb50f5c0773
 
