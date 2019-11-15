@@ -16,7 +16,8 @@ Retrieve a text Wave or file Wave by code.
 `None`
 
 ### Success Response
-**Code:** `200 OK`\
+**Code:** `200 OK`
+
 **Content:**
 ```
 {
