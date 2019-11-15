@@ -3,7 +3,7 @@
 ### Description
 Save a text Wave or file Wave.
 
-### URL
+### Endpoint
 `/waves`
 
 ### Method
