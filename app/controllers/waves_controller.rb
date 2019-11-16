@@ -1,4 +1,7 @@
 class WavesController < ApplicationController
+  # skip CSRF token check
+  skip_before_action :verify_authenticity_token
+
   def index
   end
 
