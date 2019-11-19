@@ -20,7 +20,7 @@ Wave React Web App: https://github.com/lindaayangg/Wave-Web
 
 Test the endpoints with Postman: https://www.getpostman.com/collections/739d155fdfb50f5c0773
 
-## Database
+## Database Tables
 
 ### waves
 | Field      | Type         | Description                                     |
