@@ -8,7 +8,8 @@
 
 This is the Wave Backend API which is responsible for the creation and retrieval of Waves.
 
-Wave Flutter App: https://github.com/davidhqr/Wave-App
+Wave Flutter (Android & iOS) App: https://github.com/davidhqr/Wave-App \
+Wave React Web App: https://github.com/lindaayangg/Wave-Web
 
 ## Endpoints
 
