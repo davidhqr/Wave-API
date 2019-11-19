@@ -18,7 +18,7 @@ Wave React Web App: https://github.com/lindaayangg/Wave-Web
 **`GET` `/waves/:code`** [Retrieve a Wave by code](GET_WAVE.md)\
 **`POST` `/waves`** [Save a wave](SAVE_WAVE.md)
 
-Test the endpoints with Postman: https://www.getpostman.com/collections/739d155fdfb50f5c0773
+Test the endpoints with Postman: https://www.getpostman.com/collections/739d155fdfb50f5c0773 (import the collection)
 
 ## Database Tables
 
