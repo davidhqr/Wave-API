@@ -6,6 +6,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/davidhqr/Wave-API)](https://github.com/davidhqr/Wave-API/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/davidhqr/Wave-API)](https://github.com/davidhqr/Wave-API/network)
 
+## Overview
+
 This is the Wave Backend API which is responsible for the creation and retrieval of Waves.
 
 Wave Flutter (Android & iOS) App: https://github.com/davidhqr/Wave-App \
